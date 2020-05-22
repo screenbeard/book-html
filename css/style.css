@@ -1,0 +1,454 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: 
+   ========================================================================== */
+
+body {
+  margin: 0 auto;
+  width: 1140px;
+  line-height: 18px;
+  font-family: "Neuton";
+  background-color: #000;
+}
+
+header.main {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  width: 1140px;
+  font-size: 18px;
+  margin-top: -12px;
+}
+
+footer.main {
+  position: fixed;
+  bottom: 0;
+  margin: 0 auto;
+  width: 1140px;
+  background-color: black;
+  color: white;
+}
+
+#source {
+  -webkit-flow: "main-page";
+  flow: "main-page";
+}
+
+.page {
+  /*http://kyoko-neko-chan.deviantart.com/art/Moleskine-Paper-Texture-209349260*/
+  background-image: url(../img/moleskine_paper_texture.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 460px;
+  margin-top: 54px;
+  margin-bottom: 50px;
+  background-color: transparent;
+  -moz-box-shadow:0px 0px 9px #000000;
+  -webkit-box-shadow:0px 0px 9px #000000;
+  box-shadow:0px 0px 9px #000000;
+  float: left;
+  content:-webkit-from-flow("main-page");
+  content: from(main-page);
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, cite, figure, figcaption, ol, ul {
+  margin-top: 0px;
+  margin-bottom: 18px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 18px;
+}
+
+h1 {
+  page-break-before: always;
+  line-height: 36px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 26px;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  margin-top: 132px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'NeutonCursive';
+  font-weight: normal;
+  line-height: 36px;
+  margin-top: 42px;
+  margin-bottom: 12px;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+}
+
+p {
+  text-align: justify; 
+  text-justify: newspaper;
+}
+
+section p:first-of-type:first-letter {
+    font-weight: bold;
+    font-size:46px;
+    line-height: 28px;
+    padding-right: 1px;
+    float: left;
+    font-variant: small-caps; 
+}
+
+section:empty {
+  display: hidden;
+}
+
+blockquote {
+  margin-bottom: 0px;
+}
+
+cite {
+  font-family: 'NeutonCursive';
+  text-align: right;
+  display: block;
+  width: 100%;
+  margin-right: 40px;
+  float: right;
+}
+
+figure {
+ float: left;
+ margin-bottom: 0px;
+}
+
+figcaption {
+  font-family: 'NeutonCursive';
+  text-align: center;
+}
+
+img {
+  margin-top: 0px;
+  margin-bottom: 18px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-width: 400px;
+  float: left;
+  margin-right: 18px;
+}
+
+figure img {
+  margin-bottom: 0px !important;
+  margin-right: 0px !important;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin-bottom: 0px;
+}
+
+.leftpage {
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-left: 60px;
+  padding-right: 50px;
+  padding-top: 56px;
+  padding-bottom: 54px;
+  height: 812px;
+}
+
+.rightpage {
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-left: 50px;
+  padding-right: 60px;
+  padding-top: 77px;
+  padding-bottom: 54px;
+  height: 791px;
+}
+
+.firstpage {
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 922px;
+  width: 570px;
+  margin-top: 54px;
+  margin-bottom: 50px;
+  -moz-box-shadow:0px 0px 9px #000000;
+  -webkit-box-shadow:0px 0px 9px #000000;
+  box-shadow:0px 0px 9px #000000;
+  float: left;
+  background-image: url(../img/moleskine_paper_texture.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.alignright {
+  float: right;
+  margin-left: 18px;
+}
+.alignleft {
+  float: left;
+  margin-left: 18px;
+}
+
+.twocolumn {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 18px;
+    -moz-column-gap: 18px;
+    column-gap: 18px;
+    -webkit-column-rule: 1px solid #c4c8cc;
+    -moz-column-rule: 1px solid #c4c8cc;
+    column-rule: 1px solid #c4c8cc;
+}
+.threecolumn {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 18px;
+    -moz-column-gap: 18px;
+    column-gap: 18px;
+    margin-bottom: 14px;
+    -webkit-column-rule: 1px solid #c4c8cc;
+    -moz-column-rule: 1px solid #c4c8cc;
+    column-rule: 1px solid #c4c8cc;
+}
+
+/* =============================================================================
+   Layout for mobile version  
+   ========================================================================== */
+
+@media handheld, only screen and (max-width: 1140px) {
+
+	body {
+		width: 570px;
+	}
+  
+  header.main {
+    width: 570px;
+  }
+  
+  footer.main {
+    width: 570px;
+  }
+  
+  .firstpage {
+    display: none;
+  }
+
+}
